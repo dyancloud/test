@@ -1,24 +1,28 @@
-# Git.php
+从零开始开发自己的框架:
+===================
 
-<a href='https://pledgie.com/campaigns/28604'><img alt='Click here to lend your support to: Git.php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/28604.png?skin_name=chrome' border='0' ></a>
+> 1. 为什么要开发自己的框架?
 
-## Description
++ 为了更快的开发效率
++ 为了更高的运行效率
++ 为了更好的证明自己
 
-A PHP git repository control library. Allows the running of any git command from a PHP class. Runs git commands using `proc_open`, not `exec` or the type, therefore it can run in PHP safe mode.
+> 2. 需要具备的条件:
 
-## Requirements
++ 能够熟练的使用 PHP
++ 较为深刻的理解面向对象和 MVC 概念
++ 较强的逻辑能力和动手能力
 
-A system with [git](http://git-scm.com/) installed
+> 3. 框架的运行流程:
 
-## Basic Use
++ 入口文件 -> 定义常量 ->  加载函数库 -> 自动加载类 -> 运行框架 -> 路由解析 -> 加载控制器 -> 返回结果
 
-```php
-require_once('Git.php');
+### index.php
+### define()
+### include
+### spl_autoload_register()
+### route
+### controller
+### return view
 
-$repo = Git::open('/path/to/repo');  // -or- Git::create('/path/to/repo')
-
-$repo->add('.');
-$repo->commit('Some commit message');
-$repo->push('origin', 'master');
-```
 
